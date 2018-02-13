@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	
+    <title>Dashboard | Mini-Market</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ]-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="../inc/css/nifty.min.css" rel="stylesheet">
+	<link href="../inc/css/themes/type-c/theme-mint.min.css" rel="stylesheet">
+
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="../inc/css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="../inc/css/demo/nifty-demo.min.css" rel="stylesheet">
+
+	
+<!--Animate.css [ OPTIONAL ]-->
+    <link href="../inc/plugins/animate-css/animate.min.css" rel="stylesheet">
+
+	    <!--Themify Icons [ OPTIONAL ]-->
+    <link href="../inc/plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
+        
+    <!--Morris.js [ OPTIONAL ]-->
+    <link href="../inc/plugins/morris-js/morris.min.css" rel="stylesheet">
+
+
+
+  <!--Bootstrap Table [ OPTIONAL ]-->
+    <link href="../inc/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+
+   <!--Bootstrap Validator [ OPTIONAL ]-->
+    <link href="../inc/plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
+
+
+	<link href="../inc/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="../inc/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="../inc/plugins/pace/pace.min.js"></script>
+
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="../inc/js/jquery-2.2.4.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="../inc/js/bootstrap.min.js"></script>
+
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="../inc/js/nifty.min.js"></script>
+
+
+
+
+
+    <!--=================================================-->
+    
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="../inc/js/demo/nifty-demo.min.js"></script>
+
+    
+    <!--Morris.js [ OPTIONAL ]-->
+    <script src="../inc/plugins/morris-js/morris.min.js"></script>
+	<script src="../inc/plugins/morris-js/raphael-js/raphael.min.js"></script>
+
+
+    <!--Sparkline [ OPTIONAL ]-->
+    <script src="../inc/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+	  <!--Bootstrap Table [ OPTIONAL ]-->
+    <script src="../inc/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+	
+	 <!--Bootstrap Validator [ OPTIONAL ]-->
+    <script src="../inc/plugins/bootstrap-validator/bootstrapValidator.js"></script>
+
+	<script src="../inc/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+	
+	<!--Masked Input [ OPTIONAL ]-->
+    <script src="../inc/plugins/masked-input/jquery.maskedinput.min.js"></script>
+	
+	    <!--Bootbox Modals [ OPTIONAL ]-->
+    <script src="../inc/plugins/bootbox/bootbox.min.js"></script>
+
+    <script src="../inc/plugins/malsup/jquery.blockUI.js"></script>
+
+
+	
+    <!--Specify page [ SAMPLE ]-->
+    <script src="../inc/js/demo/dashboard.js"></script>
+
+    <script src="../inc/js/sgv.js?rnd={$rnd}"></script>
+
+
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="dashboard.html" class="navbar-brand">
+                        <img src="../inc/images/logo.png" alt="Nifty Logo" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text">Mini-Market</span>
+                        </div>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-view-list"></i> 
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <!--Language selector-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End language selector-->
+
+
+
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <!--<img class="img-circle img-user media-object" src="img/profile-photos/1.png" alt="Profile Picture">-->
+                                    <i class="demo-pli-male ic-user"></i>
+                                </span>
+                                <div class="username hidden-xs">{$smarty.session.usuario.nom} {$smarty.session.usuario.ape_pat}</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="../" class="btn btn-primary">
+                                        <i class="demo-pli-unlock"></i> Salir
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+
+                        <li>
+                            <a href="#" class="aside-toggle navbar-aside-icon">
+                                <i class="pci-ver-dots"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">Dashboard</h1>
+
+                    <!--Searchbox-->
+                   
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+                    
+					<div class="row">
+					    <div class="col-lg-7">
+					
+					        <!--Network Line Chart-->
+					        <!--===================================================-->
+					        <div id="demo-panel-network" class="panel">
+					            <div class="panel-heading">
+					                <div class="panel-control">
+					                    <button id="demo-panel-network-refresh" data-toggle="panel-overlay" data-target="#demo-panel-network" class="btn"><i class="demo-pli-repeat-2 icon-lg"></i></button>
+					                    <div class="btn-group">
+					                        <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="demo-pli-gear icon-lg"></i></button>
+					                        <ul class="dropdown-menu dropdown-menu-right">
+					                            <li><a href="#">Action</a></li>
+					                            <li><a href="#">Another action</a></li>
+					                            <li><a href="#">Something else here</a></li>
+					                            <li class="divider"></li>
+					                            <li><a href="#">Separated link</a></li>
+					                        </ul>
+					                    </div>
+					                </div>
+					                <h3 class="panel-title">Ganancias del mes</h3>
+					            </div>
+					
+					            <!--Morris line chart placeholder-->
+					            <div id="morris-chart-network" class="morris-full-content"></div>
+					
+					            <!--Chart information-->
+					            <!--Chart information-->
+					            <div class="panel-body">
+					                <div class="row pad-top">
+					                    <div class="col-lg-12">
+					                        <div class="media">
+					                            <div class="media-left">
+					                                <div class="media">
+					                                    <p class="text-semibold text-main">Gastos</p>
+					                                    <div class="media-left pad-no">
+					                                        <span class="text-2x text-semibold text-nowrap text-main">
+					                                            <i class="demo-pli-temperature"></i>S/.{$total_gastos}	
+					                                        </span>
+					                                    </div>
+					                                </div>
+					                            </div>
+												<div class="media-left">
+					                                <div class="media">
+					                                    <p class="text-semibold text-main">Compras</p>
+					                                    <div class="media-left pad-no">
+					                                        <span class="text-2x text-semibold text-nowrap text-main">
+					                                            <i class="demo-pli-temperature"></i>S/.{$total_compras}
+					                                        </span>
+					                                    </div>
+					                                </div>
+					                            </div>
+												<div class="media-left">
+					                                <div class="media">
+					                                    <p class="text-semibold text-main">Por cobrar</p>
+					                                    <div class="media-left pad-no">
+					                                        <span class="text-2x text-semibold text-nowrap text-main">
+					                                            <i class="demo-pli-temperature"></i>S/.972,412.86
+					                                        </span>
+					                                    </div>
+					                                </div>
+					                            </div>
+												<div class="media-left">
+					                                <div class="media">
+					                                    <p class="text-semibold text-main">Por pagar</p>
+					                                    <div class="media-left pad-no">
+					                                        <span class="text-2x text-semibold text-nowrap text-main">
+					                                            <i class="demo-pli-temperature"></i>S/.963,276.68
+					                                        </span>
+					                                    </div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					
+					                    
+					                </div>
+					            </div>
+					
+					
+					        </div>
+					        <!--===================================================-->
+					        <!--End network line chart-->
+					
+					    </div>
+						<!-- INICIO INGRESOS A CAJA ( OTROS MOTIVOS, PRESTAMOS, GUARDAR DINERO, ETC) -->
+					    <div class="col-lg-5">
+					        <div class="row">
+								{foreach from=$ListaIngresos item=ingreso}
+								<div class="col-sm-6 col-lg-6">
+					                <div class="panel panel-info panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-data-storage icon-fw"></i>{$ingreso['nom']}</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/{$ingreso['total']}</span>
+					                            Total
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/{$ingreso['hoy']}</span>
+					                            Hoy
+					                        </p>
+											<p class="mar-no">
+					                            <span class="pull-right text-bold">S/{$ingreso['ayer']}</span>
+					                            Ayer
+					                        </p>
+					                    </div>
+					                </div>
+					            </div>
+								{/foreach}
+								
+					            <div class="col-sm-6 col-lg-6">
+					
+					                <!--Sparkline Line Chart-->
+					                <div class="panel panel-success panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-wallet-2 icon-fw"></i> Ganancias del día</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/ 0.00</span>
+					                            Ayer
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/ 0.00</span>
+					                            Hoy
+					                        </p>
+					                    </div>
+					                </div>
+					            </div>
+					
+								
+					        </div>
+							
+							<div class="row">
+								<div class="col-sm-6 col-lg-6">
+					
+					                <!--Sparkline Area Chart-->
+					                <div class="panel panel-success panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-data-storage icon-fw"></i> Compras</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/.3,000</span>
+					                            Ayer
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/.2,500</span>
+					                            Hoy
+					                        </p>
+					                    </div>
+					                    <div class="pad-all text-center">
+					                        <!--Placeholder-->
+					                        <div id="demo-sparkline-area2"></div>
+					                    </div>
+					                </div>
+					            </div>
+					            <div class="col-sm-6 col-lg-6">
+					
+					                <!--Sparkline Line Chart-->
+					                <div class="panel panel-warning panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-wallet-2 icon-fw"></i> Ventas</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/.7624</span>
+					                            Ayer
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">S/.32</span>
+					                            Hoy
+					                        </p>
+					                    </div>
+					                    <div class="pad-all text-center">
+					
+					                        <!--Placeholder-->
+					                        <div id="demo-sparkline-line2"></div>
+					
+					                    </div>
+					                </div>
+					            </div>							
+							</div>
+							
+					        <div class="row">
+					            <div class="col-sm-6 col-lg-6">
+					
+					                <!--Sparkline bar chart -->
+					                <div class="panel panel-purple panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-bag-coins icon-fw"></i> Por cobrar</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">$764</span>
+					                            Ayer
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">$1,332</span>
+					                            Hoy
+					                        </p>
+					                    </div>
+					                    <div class="pad-all text-center">
+					
+					                        <!--Placeholder-->
+					                        <div id="demo-sparkline-bar" class="box-inline"></div>
+					
+					                    </div>
+					                </div>
+					            </div>
+					            <div class="col-sm-6 col-lg-6">
+					
+					                <!--Sparkline pie chart -->
+					                <div class="panel panel-warning panel-colorful">
+					                    <div class="pad-all">
+					                        <p class="text-lg text-semibold"><i class="demo-pli-check icon-fw"></i> Por pagar</p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">34</span>
+					                            Ayer
+					                        </p>
+					                        <p class="mar-no">
+					                            <span class="pull-right text-bold">79</span>
+					                            Hoy
+					                        </p>
+					                    </div>
+					                    <div class="pad-all">
+					                        <ul class="list-group list-unstyled">
+					                            <li class="mar-btm">
+					                                <span class="label label-warning pull-right">15%</span>
+					                                <p>Progress</p>
+					                                <div class="progress progress-md">
+					                                    <div style="width: 15%;" class="progress-bar progress-bar-light">
+					                                        <span class="sr-only">15%</span>
+					                                    </div>
+					                                </div>
+					                            </li>
+					                        </ul>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					
+					
+					<div class="row">
+					    <div class="col-xs-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">Turnos</h3>
+					            </div>
+					
+					            <!--Data Table-->
+					            <!--===================================================-->
+					            <div class="panel-body">
+					                
+					                <div class="table-responsive">
+					                    <table class="table table-striped">
+					                        <thead>
+					                            <tr>
+					                                <th>Código</th>
+					                                <th>Trabajador</th>
+					                                <th>Entrada</th>
+					                                <th>Salida</th>
+					                                <th class="text-center">Efectivo</th>
+					                                <th class="text-center">BCP</th>
+					                                <th class="text-center">Recargas</th>
+					                                <th class="text-center">Sta Barbara</th>
+					                            </tr>
+					                        </thead>
+					                        <tbody>
+					                            <tr>
+					                                <td><a href="#" class="btn-link">53431</a></td>
+					                                <td>Jenny</td>
+					                                <td><span class="text-muted"><i class="fa fa-clock-o"></i>9:00am</span></td>
+					                                <td><span class="text-muted"><i class="fa fa-clock-o"></i>6:00pm</span></td>
+					                                <td class="text-center">
+					                                    <div class="label label-table label-success">6,310.00</div>
+					                                </td>
+					                                <td class="text-center">33,254.91</td>
+					                                <td class="text-center">
+					                                    <div class="label label-table label-success">1,155.15</div>
+					                                </td>
+					                                <td class="text-center">180.84</td>
+					                            </tr>
+					                            <tr>
+					                                <td><a href="#" class="btn-link">53432</a></td>
+					                                <td>Marianella</td>
+					                                <td><span class="text-muted"><i class="fa fa-clock-o"></i>6:00pm</span></td>
+					                                <td><span class="text-muted"><i class="fa fa-clock-o"></i>10:00pm</span></td>
+					                                <td class="text-center">
+					                                    <div class="label label-table label-success">6,310.00</div>
+					                                </td>
+					                                <td class="text-center">33,254.91</td>
+					                                <td class="text-center">
+					                                    <div class="label label-table label-success">1,155.15</div>
+					                                </td>
+					                                <td class="text-center">180.84</td>
+					                            </tr>												
+
+					                        </tbody>
+					                    </table>
+					                </div>
+
+					            </div>
+					            <!--===================================================-->
+					            <!--End Data Table-->
+					
+					        </div>
+					    </div>
+					</div>
+					
+					
+					
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            <!--===================================================-->
+   
+            <!--===================================================-->
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Menu-->
+                    <!--================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+
+                                <!--Profile Widget-->
+                                <!--================================-->
+                                <div id="mainnav-profile" class="mainnav-profile">
+                                    <div class="profile-wrap">
+									<!--
+                                        <div class="pad-btm">
+                                            <span class="label label-success pull-right">New</span>
+                                            <img class="img-circle img-sm img-border" src="img/profile-photos/1.png" alt="Profile Picture">
+                                        </div>
+										-->
+                                        <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                            <span class="pull-right dropdown-toggle">
+                                                <i class="dropdown-caret"></i>
+                                            </span>
+                                            <p class="mnp-name">{$smarty.session.usuario.nom} {$smarty.session.usuario.ape_pat}</p>
+                                            {$smarty.session.usuario.perfil}
+                                        </a>
+                                    </div>
+                                    <div id="profile-nav" class="collapse list-group bg-trans">
+                                        
+                                        <a href="../" class="list-group-item">
+                                            <i class="demo-pli-unlock icon-lg icon-fw"></i> Salir
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+                                <!--Menu-->
+                                <!--================================-->
+
+                                <ul id="mainnav-menu" class="list-group">
+						
+									{if ($smarty.session.permisos[11] or $smarty.session.permisos[12]  or $smarty.session.permisos[13] or $smarty.session.permisos[14]or $smarty.session.permisos[15] )}
+									<li class="list-divider"></li>
+						            <!--Category name-->
+						            <li class="list-header">Configuración</li>
+						
+						            <!--Menu list item-->
+									{if $smarty.session.permisos[11]}
+									<li>
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-psi-home"></i>
+						                    <span class="menu-title">
+												<strong>Empresa</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('empresa_editar')">Empresa</a></li>
+						                    <li><a href="javascript:menu('sucursal')">Sucursales</a></li>
+						                    <li><a href="javascript:menu('servicio')">Servicios</a></li>
+											<li><a href="javascript:menu('socio')">Socios</a></li>
+						                </ul>
+						            </li>
+									{/if}
+
+									{if $smarty.session.permisos[12] }
+									<li >
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-pli-inbox-full"></i>
+						                    <span class="menu-title">
+												<strong>Almacén</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('familia')">Familia</a></li>
+						                    <li><a href="javascript:menu('linea')">Línea de producto</a></li>
+						                    <li><a href="javascript:menu('producto')">Producto</a></li>
+											<li><a href="javascript:menu('marca')">Marca</a></li>
+											<li><a href="javascript:menu('unidad_medida')">Unidades de medida</a></li>
+											<li><a href="javascript:menu('tipo_unidad')">Tipo de unidad</a></li>
+						                </ul>
+						            </li>
+									{/if}
+									
+									{if $smarty.session.permisos[13] }
+									<li >
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-psi-repair"></i>
+						                    <span class="menu-title">
+												<strong>Configuración</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+						                    <li><a href="javascript:menu('tipo_documento')">Tipo de documento</a></li>
+											<li><a href="javascript:menu('tipo_comprobante')">Tipo de comprobante</a></li>
+						                </ul>
+						            </li>										
+									{/if}
+						
+									{if $smarty.session.permisos[14]}
+									<li >
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-psi-split-vertical-2"></i>
+						                    <span class="menu-title">
+												<strong>Seguridad</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('usuario')">Usuarios</a></li>
+											<li><a href="javascript:menu('perfil')">Perfiles</a></li>
+										</ul>
+						            </li>										
+									{/if}
+
+									{if $smarty.session.permisos[15]}
+									<li >
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-psi-split-vertical-2"></i>
+						                    <span class="menu-title">
+												<strong>Caja</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('motivo_movimiento')">Motivos de movimiento</a></li>
+										</ul>
+						            </li>										
+									{/if}
+									
+									{/if}
+						            
+	
+									{if $smarty.session.permisos[21] or  $smarty.session.permisos[22] or  $smarty.session.permisos[23]}
+	
+									<li class="list-divider"></li>
+						            <!--Caja-->
+						            <li class="list-header">Caja</li>
+									
+									{if $smarty.session.permisos[21]}
+						
+									<li>
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-pli-bag-coins"></i>
+						                    <span class="menu-title">
+												<strong>Caja</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('caja_apertura')">Apertura</a></li>
+						                    <li><a href="javascript:menu('caja_cierre')">Cierre</a></li>
+											<li><a href="javascript:menu('movimiento_ingreso')">Ingresos</a></li>
+											<li><a href="javascript:menu('movimiento_salida')">Salidas</a></li>
+						                </ul>
+						            </li>
+									{/if}
+
+						
+									<li>
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-pli-bag-coins"></i>
+						                    <span class="menu-title">
+												<strong>Almacén</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('stock')">Stock</a></li>
+						                </ul>
+						            </li>
+
+									
+									{if $smarty.session.permisos[22]}
+									<li>
+						                <a href="#" data-original-title="" title="" aria-expanded="false">
+						                    <i class="demo-pli-shopping-basket"></i>
+						                    <span class="menu-title">
+												<strong>Compras</strong>
+											</span>
+											<i class="arrow"></i>
+						                </a>
+						
+						                <!--Submenu-->
+						                <ul class="collapse out" aria-expanded="false">
+											<li><a href="javascript:menu('compra_registrar')">Registrar</a></li>
+						                    <li><a href="javascript:menu('compra')">Actualización</a></li>
+						                </ul>
+						            </li>
+									{/if}
+									
+									{if $smarty.session.permisos[$config.PERMISO.PROVEEDOR]}
+						            <li>
+						                <a  href="javascript:menu('proveedor')">
+						                    <i class="demo-pli-support"></i>
+						                    <span class="menu-title">Proveedor</span>
+						                </a>
+						            </li>
+									{/if}
+									{/if}
+						
+									{if $smarty.session.permisos[31] or $smarty.session.permisos[32] }
+						            <li class="list-divider"></li>
+						
+						            <!--Category name-->
+						            <li class="list-header">Ventas</li>
+						
+									{if $smarty.session.permisos[31]}
+						            <!--Menu list item-->
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-repair"></i>
+						                    <span class="menu-title">Ventas</span>
+						                </a>
+						
+
+						            </li>
+						
+									{/if}
+						
+
+									{if $smarty.session.permisos[32]}
+						            <!--Menu list item-->
+						            <li>
+						                <a href="javascript:menu('cliente')">
+						                    <i class="demo-psi-file-html"></i>
+						                    <span class="menu-title">Clientes</span>
+						                </a>
+						
+						    
+						            </li>
+									{/if}
+									{/if}
+									
+
+									{if $smarty.session.permisos[41]}
+									<li class="list-divider"></li>
+						
+						            <li class="list-header">Creditos</li>
+
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-repair"></i>
+						                    <span class="menu-title">pagar</span>
+						                </a>
+						
+						            </li>
+									{/if}
+									
+						
+									{if $smarty.session.permisos[51] or $smarty.session.permisos[52]  or $smarty.session.permisos[53]  or $smarty.session.permisos[54] or $smarty.session.permisos[55] }
+						            <li class="list-divider"></li>
+						            <li class="list-header">Reportes</li>
+									
+									{if $smarty.session.permisos[51]}
+									<li>
+						                <a href="#">
+						                    <i class="demo-psi-happy"></i>
+						                    <span class="menu-title">Ventas x Comprobante</span>
+						                </a>
+						            </li>
+									{/if}
+									
+									{if $smarty.session.permisos[52]}
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-happy"></i>
+						                    <span class="menu-title">Ventas x producto</span>
+						                </a>
+						            </li>
+									{/if}
+									
+						            {if $smarty.session.permisos[53]}
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-happy"></i>
+						                    <span class="menu-title">Compras x comprobante</span>
+						                </a>
+						            </li>
+									{/if}
+						
+						            {if $smarty.session.permisos[54]}
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-happy"></i>
+						                    <span class="menu-title">Compras x producto</span>
+						                </a>
+						            </li>
+									{/if}
+
+									 {if $smarty.session.permisos[55]}
+						            <li>
+						                <a href="#">
+						                    <i class="demo-psi-happy"></i>
+						                    <span class="menu-title">Creditos</span>
+						                </a>
+						            </li>
+									{/if}
+									{/if}
+
+									
+								</ul>
+
+                           
+                                <!--================================-->
+                                <!--Menu-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--================================-->
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2016 MiniMarket  FELIX</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+
+    
+        <!-- SETTINGS - DEMO PURPOSE ONLY -->
+    <!--===================================================-->
+    <div id="demo-set" class="demo-set">
+        <div id="demo-set-body" class="demo-set-body collapse">
+            <div id="demo-set-alert"></div>
+            <div class="pad-hor bord-btm clearfix">
+                <div class="pull-right pad-top">
+                    <button id="demo-btn-close-settings" class="btn btn-trans">
+                        <i class="pci-cross pci-circle icon-lg"></i>
+                    </button>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <i class="demo-pli-gear icon-2x"></i>
+                    </div>
+                    <div class="media-body">
+                        <span class="text-semibold text-lg text-main">Costomize</span>
+                        <p class="text-muted text-sm">Customize Nifty's layout, sidebars, and color schemes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-set-content clearfix">
+                <div class="col-xs-6 col-md-3">
+                    <div class="pad-all bg-gray-light">
+                        <p class="text-semibold text-main text-lg">Layout</p>
+                        <p class="text-semibold text-main">Boxed Layout</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-box-lay" class="toggle-switch" type="checkbox">
+                                <label for="demo-box-lay"></label>
+                            </div>
+                            Boxed Layout
+                        </div>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <button id="demo-box-img" class="btn btn-sm btn-trans" disabled><i class="pci-hor-dots"></i></button>
+                            </div>
+                            Background Images <span class="label label-primary">New</span>
+                        </div>
+
+                        <hr class="new-section-xs bord-no">
+                        <p class="text-semibold text-main">Animations</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-anim" class="toggle-switch" type="checkbox" checked>
+                                <label for="demo-anim"></label>
+                            </div>
+                            Enable Animations
+                        </div>
+                        <div class="pad-btm">
+                            <div class="select pull-right">
+                                <select id="demo-ease">
+                                    <option value="effect" selected>ease (Default)</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="steps">Steps</option>
+                                    <option value="jumping">Jumping</option>
+                                    <option value="rubber">Rubber</option>
+                                </select>
+                            </div>
+                            Transitions
+                        </div>
+
+                        <hr class="new-section-xs bord-no">
+
+                        <p class="text-semibold text-main text-lg">Header / Navbar</p>
+                        <div>
+                            <div class="pull-right">
+                                <input id="demo-navbar-fixed" class="toggle-switch" type="checkbox">
+                                <label for="demo-navbar-fixed"></label>
+                            </div>
+                            Fixed Position
+                        </div>
+
+                        <hr class="new-section-xs bord-no">
+
+                        <p class="text-semibold text-main text-lg">Footer</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-footer-fixed" class="toggle-switch" type="checkbox">
+                                <label for="demo-footer-fixed"></label>
+                            </div>
+                            Fixed Position
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 pos-rel">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="pad-all">
+                                <p class="text-semibold text-main text-lg">Sidebars</p>
+                                <p class="text-semibold text-main">Navigation</p>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-fixed" class="toggle-switch" type="checkbox">
+                                        <label for="demo-nav-fixed"></label>
+                                    </div>
+                                    Fixed Position
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-profile" class="toggle-switch" type="checkbox" checked>
+                                        <label for="demo-nav-profile"></label>
+                                    </div>
+                                    Widget Profil <small class="label label-primary">New</small>
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-shortcut" class="toggle-switch" type="checkbox" checked>
+                                        <label for="demo-nav-shortcut"></label>
+                                    </div>
+                                    Shortcut Buttons
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-coll" class="toggle-switch" type="checkbox">
+                                        <label for="demo-nav-coll"></label>
+                                    </div>
+                                    Collapsed Mode
+                                </div>
+
+                                <div class="clearfix">
+                                    <div class="select pad-btm pull-right">
+                                        <select id="demo-nav-offcanvas">
+                                            <option value="none" selected disabled="disabled">-- Select Mode --</option>
+                                            <option value="push">Push</option>
+                                            <option value="slide">Slide in on top</option>
+                                            <option value="reveal">Reveal</option>
+                                        </select>
+                                    </div>
+                                    Off-Canvas
+                                </div>
+
+                                <p class="text-semibold text-main">Aside</p>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-vis" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-vis"></label>
+                                    </div>
+                                    Visible
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-fixed" class="toggle-switch" type="checkbox" checked>
+                                        <label for="demo-asd-fixed"></label>
+                                    </div>
+                                    Fixed Position
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-float" class="toggle-switch" type="checkbox" checked>
+                                        <label for="demo-asd-float"></label>
+                                    </div>
+                                    Floating <span class="label label-primary">New</span>
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-align" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-align"></label>
+                                    </div>
+                                    Left Side
+                                </div>
+                                <div>
+                                    <div class="pull-right">
+                                        <input id="demo-asd-themes" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-themes"></label>
+                                    </div>
+                                    Dark Version
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="demo-theme">
+                                <div class="row bg-gray-light pad-top">
+                                    <p class="text-semibold text-main text-lg pad-lft">Color Schemes</p>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">Header</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-light add-tooltip" data-theme="theme-light" data-type="a" data-title="(A). Light">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-navy add-tooltip" data-theme="theme-navy" data-type="a" data-title="(A). Navy Blue">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-ocean add-tooltip" data-theme="theme-ocean" data-type="a" data-title="(A). Ocean">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-lime add-tooltip" data-theme="theme-lime" data-type="a" data-title="(A). Lime">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-purple add-tooltip" data-theme="theme-purple" data-type="a" data-title="(A). Purple">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-dust add-tooltip" data-theme="theme-dust" data-type="a" data-title="(A). Dust">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-mint add-tooltip" data-theme="theme-mint" data-type="a" data-title="(A). Mint">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-yellow add-tooltip" data-theme="theme-yellow" data-type="a" data-title="(A). Yellow">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-well-red add-tooltip" data-theme="theme-well-red" data-type="a" data-title="(A). Well Red">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-coffee add-tooltip" data-theme="theme-coffee" data-type="a" data-title="(A). Coffee">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="a" data-title="(A). Prickly pear">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-a-dark add-tooltip" data-theme="theme-dark" data-type="a" data-title="(A). Dark">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">Brand</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-light add-tooltip" data-theme="theme-light" data-type="b" data-title="(B). Light">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-navy add-tooltip" data-theme="theme-navy" data-type="b" data-title="(B). Navy Blue">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-ocean add-tooltip" data-theme="theme-ocean" data-type="b" data-title="(B). Ocean">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-lime add-tooltip" data-theme="theme-lime" data-type="b" data-title="(B). Lime">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-purple add-tooltip" data-theme="theme-purple" data-type="b" data-title="(B). Purple">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-dust add-tooltip" data-theme="theme-dust" data-type="b" data-title="(B). Dust">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-mint add-tooltip" data-theme="theme-mint" data-type="b" data-title="(B). Mint">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-yellow add-tooltip" data-theme="theme-yellow" data-type="b" data-title="(B). Yellow">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-well-red add-tooltip" data-theme="theme-well-red" data-type="b" data-title="(B). Well red">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-coffee add-tooltip" data-theme="theme-coffee" data-type="b" data-title="(B). Coofee">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="b" data-title="(B). Prickly pear">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-b-dark add-tooltip" data-theme="theme-dark" data-type="b" data-title="(B). Dark">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">Navigation</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-light add-tooltip" data-theme="theme-light" data-type="c" data-title="(C). Light">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-navy add-tooltip" data-theme="theme-navy" data-type="c" data-title="(C). Navy Blue">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-ocean add-tooltip" data-theme="theme-ocean" data-type="c" data-title="(C). Ocean">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-lime add-tooltip" data-theme="theme-lime" data-type="c" data-title="(C). Lime">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-purple add-tooltip" data-theme="theme-purple" data-type="c" data-title="(C). Purple">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-dust add-tooltip" data-theme="theme-dust" data-type="c" data-title="(C). Dust">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-mint add-tooltip" data-theme="theme-mint" data-type="c" data-title="(C). Mint">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-yellow add-tooltip" data-theme="theme-yellow" data-type="c" data-title="(C). Yellow">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-well-red add-tooltip" data-theme="theme-well-red" data-type="c" data-title="(C). Well Red">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-coffee add-tooltip" data-theme="theme-coffee" data-type="c" data-title="(C). Coffee">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-prickly-pear add-tooltip" data-theme="theme-prickly-pear" data-type="c" data-title="(C). Prickly pear">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                            <a href="#" class="demo-theme demo-c-dark add-tooltip" data-theme="theme-dark" data-type="c" data-title="(C). Dark">
+                                                <div class="demo-theme-brand"></div>
+                                                <div class="demo-theme-head"></div>
+                                                <div class="demo-theme-nav"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demo-bg-boxed" class="demo-bg-boxed">
+                        <div class="demo-bg-boxed-content">
+                            <p class="text-semibold text-main text-lg mar-no">Background Images</p>
+                            <p class="text-sm text-muted">Add an image to replace the solid background color</p>
+                            <div class="row">
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">Blurred</p>
+                                    <div id="demo-blurred-bg" class="text-justify">
+                                        <!--Blurred Backgrounds-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">Polygon &amp; Geometric</p>
+                                    <div id="demo-polygon-bg" class="text-justify">
+                                        <!--Polygon Backgrounds-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">Abstract</p>
+                                    <div id="demo-abstract-bg" class="text-justify">
+                                        <!--Abstract Backgrounds-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-bg-boxed-footer">
+                            <button id="demo-close-boxed-img" class="btn btn-primary">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--===================================================-->
+    <!-- END SETTINGS -->
+
+	<script>
+	    // WELCOME NOTIFICATIONS
+    // =================================================================
+    // Require Admin Core Javascript
+    // =================================================================
+    $.niftyNoty({
+        type: 'dark',
+        title: 'Bienvenido {$smarty.session.usuario.nom} {$smarty.session.usuario.ape_pat}.',
+        message: 'Estamos en la sucurusal de Ventanilla',
+        container: 'floating',
+        timer: 5000
+    });
+	</script>
+	
+
+</body>
+</html>
